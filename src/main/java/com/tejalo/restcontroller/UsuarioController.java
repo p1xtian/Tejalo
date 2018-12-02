@@ -69,10 +69,9 @@ public class UsuarioController {
 		
 		Usuario usuario = usuarioRepositorio.findBycodigo(codigo);
 		
-		usuario.setApellido(usuarioDetalle.getApellido());
-		usuario.setNombre(usuarioDetalle.getNombre());
-		usuario.setTelefono(usuarioDetalle.getTelefono());
-
+		usuario.setLastName(usuarioDetalle.getLastName());
+		usuario.setFirstName(usuarioDetalle.getFirstName());
+		usuario.setPhone(usuarioDetalle.getPhone());
 		Usuario updatedUsuario = usuarioRepositorio.save(usuario);
 		return updatedUsuario;
 	}
@@ -84,7 +83,7 @@ public class UsuarioController {
 		
 		Usuario usuario = usuarioRepositorio.findBycodigo(codigo);
 		
-		usuario.setEstado("I");		
+		usuario.setStatus("I");		
 
 		Usuario updatedUsuario = usuarioRepositorio.save(usuario);
 		return updatedUsuario;

@@ -20,96 +20,94 @@ public class Usuario implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	@Column(length = 50)
-	private String Nombre;
+	private String firstName;
 	@Column(length = 50)
-	private String Apellido;
+	private String lastName;
 	@Column(length = 8)
-	private String DNI;
+	private String dni;
 	@Column(length = 100)
-	private String Email;
+	private String email;
 	@Column(length = 20)
-	private String Telefono;
-	@Column(length = 1)
-	private String Sexo;
+	private String password;
 	@Column(length = 20)
-	private String Password;
-	@Column(length = 1)
-	private String Estado;
+	private String phone;
+	@Column(length = 20)
+	private String gender;
 	@Column(columnDefinition = "VARCHAR(MAX)")
-	private String photoString;
+	private String photo;
 	@Column(length = 1)
-	private String Role;
-	
-	
-	public String getRole() {
-		return Role;
-	}
-	public void setRole(String role) {
-		Role = role;
-	}
-	public String getPhotoString() {
-		return photoString;
-	}
-	public void setPhotoString(String photoString) {
-		this.photoString = photoString;
-	}
+	private String roleId;
+	@Column(length = 1)
+	private String status;
 	public Long getCodigo() {
 		return codigo;
 	}
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
-	public String getNombre() {
-		return Nombre;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setNombre(String nombre) {
-		Nombre = nombre;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getApellido() {
-		return Apellido;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setApellido(String apellido) {
-		Apellido = apellido;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-	public String getDNI() {
-		return DNI;
+	public String getDni() {
+		return dni;
 	}
-	public void setDNI(String dNI) {
-		DNI = dNI;
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 	public void setEmail(String email) {
-		Email = email;
-	}
-	public String getTelefono() {
-		return Telefono;
-	}
-	public void setTelefono(String telefono) {
-		Telefono = telefono;
-	}
-	public String getSexo() {
-		return Sexo;
-	}
-	public void setSexo(String sexo) {
-		Sexo = sexo;
+		this.email = email;
 	}
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
-	public String getEstado() {
-		return Estado;
+	public String getPhone() {
+		return phone;
 	}
-	public void setEstado(String estado) {
-		Estado = estado;
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+	public String getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(String roleId) {
+		this.roleId = roleId;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
+	
 	
 }
