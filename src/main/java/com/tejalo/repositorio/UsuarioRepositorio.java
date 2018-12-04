@@ -19,8 +19,8 @@ public interface UsuarioRepositorio extends CrudRepository<Usuario, Long>{
 	 Usuario findDataByemail(String email);
 	 
 	 
-	 @Query(value = "SELECT * FROM usuario u WHERE u.email = ?1 and password = ?2 and estado='A'", nativeQuery = true)
-	  List<Usuario> findDataByLogin(String nombre, String password);
+	 @Query(value = "SELECT TOP 1 * FROM usuario u WHERE u.email = ?1 and password = ?2 and status='A'", nativeQuery = true)
+	  Usuario findDataByLogin(String nombre, String password);
 	 
 	 
 	

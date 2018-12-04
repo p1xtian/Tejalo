@@ -38,10 +38,10 @@ public class UsuarioController {
 	}
 	
 	
-	@GetMapping("/usuarios/{nombre}/{password}")
-	public List<Usuario> obtenerUsuarioByFetch(@PathVariable(value = "nombre") String nombre,
+	@GetMapping("/usuarios/{email}/{password}")
+	public Usuario obtenerUsuarioByFetch(@PathVariable(value = "email") String email,
 			@PathVariable(value = "password") String password) {
-		return usuarioRepositorio.findDataByLogin(nombre, password);
+		return usuarioRepositorio.findDataByLogin(email, password);
 	}
 	
 	
