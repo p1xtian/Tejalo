@@ -37,14 +37,14 @@ public class PedidoController {
 		return pedidoRepositorio.save(pedido);
 	}
 	
-	/*
 	
-	@GetMapping("/usuario/{codigo}") 
-	 public Usuario	obtenerUsuarioById(@PathVariable(value = "codigo") Long codigo) {
-		return usuarioRepositorio.findBycodigo(codigo);
+	
+	@GetMapping("/pedido/{codigo}") 
+	 public Pedido	obtenerPedidoById(@PathVariable(value = "codigo") Long codigo) {
+		return pedidoRepositorio.findBycodigo(codigo);
 	    }
 	
-
+/*
 	@GetMapping("/usuario/buscarDNI/{DNI}") 
 	 public Usuario	 findDataByDNI(@PathVariable(value = "DNI") String DNI) {
 	    return usuarioRepositorio.findDataByDNI(DNI);

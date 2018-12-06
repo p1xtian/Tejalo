@@ -12,7 +12,7 @@ public interface PedidoRepositorio extends CrudRepository<Pedido, Long>{
 
 	Pedido findBycodigo(Long codigo);
 	 
-	 @Query(value = "SELECT * FROM pedido u WHERE u.ruc = ?1", nativeQuery = true)
+	 @Query(value = "SELECT * FROM pedido u WHERE u.id = ?1", nativeQuery = true)
 	 Pedido findDataByDNI(String ruc);
 	 
 	
