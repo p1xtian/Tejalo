@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tejalo.entidades.Pedido;
+import com.tejalo.entidades.Usuario;
 import com.tejalo.repositorio.PedidoRepositorio;
 
 @RestController
@@ -43,6 +44,22 @@ public class PedidoController {
 	 public Pedido	obtenerPedidoById(@PathVariable(value = "codigo") Long codigo) {
 		return pedidoRepositorio.findBycodigo(codigo);
 	    }
+	
+	@PutMapping("/pedido/{codigo}")
+	public Pedido actualizarPedido(@PathVariable(value = "codigo") Long codigo,
+			@Valid @RequestBody Pedido pedidoDetalle) {
+		
+		Pedido pedido = pedidoRepositorio.findBycodigo(codigo);
+		
+		pedido.setPhoto(pedidoDetalle.getPhoto());
+		pedido.setValidacion(pedidoDetalle.getValidacion());
+		pedido.setEstado(pedidoDetalle.getEstado());
+		Pedido updatedPedido = pedidoRepositorio.save(pedido);
+		return updatedPedido;
+	}
+	
+	
+	
 	
 /*
 	@GetMapping("/usuario/buscarDNI/{DNI}") 

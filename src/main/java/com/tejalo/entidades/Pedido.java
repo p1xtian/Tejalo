@@ -20,7 +20,7 @@ public class Pedido implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
-	@Column(length = 11)
+	@Column(length = 100)
 	private String usuario;
 	
 	@Column(length = 100)
@@ -47,7 +47,7 @@ public class Pedido implements Serializable {
 	@Column(length = 20)
 	private String estado;
 	
-	@Column(length = 100)
+	@Column(columnDefinition = "VARCHAR(MAX)")
 	private String validacion;
 	
 	@Column(columnDefinition = "VARCHAR(MAX)")
