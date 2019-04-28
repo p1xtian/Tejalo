@@ -15,5 +15,6 @@ public interface RestaurantRepositorio extends CrudRepository<Restaurant, Long>{
 
 	Restaurant findBycodigo(Long codigo);
 	
-	
+	 @Query(value = "SELECT * FROM restaurant u WHERE u.correo = ?1 and password = ?2 and activo ='true'", nativeQuery = true)
+	Restaurant findDataByLogin(String nombre, String password);
 }

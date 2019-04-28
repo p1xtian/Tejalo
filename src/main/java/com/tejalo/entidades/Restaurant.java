@@ -21,11 +21,26 @@ public class Restaurant implements Serializable {
 	private Long codigo;
 	
 	@Column(length = 50)
+	private String correo;
+	
+	@Column(length = 20)
+	private String password;
+	
+	@Column(length = 20)
+	private String fechadealta;
+	
+	@Column(length = 20)
+	private String fechadebaja;
+	
+	@Column(length = 20)
+	private String ruc;
+	
+	@Column(length = 50)
 	private String razonsocial;
 	
+	@Column(length = 5)
+	private String activo;
 
-	private Long adminId;
-	
 	@Column(length = 50)
 	private String direccion;
 	
@@ -38,16 +53,16 @@ public class Restaurant implements Serializable {
 	@Column(length = 50)
 	private String longitud;
 	
-	@Column(length = 50)
+	@Column(columnDefinition = "VARCHAR(MAX)")
 	private String logo;
 	
 	@Column(length = 50)
 	private String descripcion;
 	
-	@Column(length = 1)
+	@Column(length = 5)
 	private String garaje;
 	
-	@Column(length = 1)
+	@Column(length = 5)
 	private String terraza;
 	
 	@Column(length = 4)
@@ -56,7 +71,7 @@ public class Restaurant implements Serializable {
 	@Column(length = 4)
 	private String aforo;
 	
-	@Column(length = 1)
+	@Column(length = 5)
 	private String aireacondicionado;
 	
 
@@ -73,6 +88,56 @@ public class Restaurant implements Serializable {
 	}
 
 
+	public String getCorreo() {
+		return correo;
+	}
+
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	public String getFechadealta() {
+		return fechadealta;
+	}
+
+
+	public void setFechadealta(String fechadealta) {
+		this.fechadealta = fechadealta;
+	}
+
+
+	public String getFechadebaja() {
+		return fechadebaja;
+	}
+
+
+	public void setFechadebaja(String fechadebaja) {
+		this.fechadebaja = fechadebaja;
+	}
+
+
+	public String getRuc() {
+		return ruc;
+	}
+
+
+	public void setRuc(String ruc) {
+		this.ruc = ruc;
+	}
+
+
 	public String getRazonsocial() {
 		return razonsocial;
 	}
@@ -83,13 +148,13 @@ public class Restaurant implements Serializable {
 	}
 
 
-	public Long getAdminId() {
-		return adminId;
+	public String getActivo() {
+		return activo;
 	}
 
 
-	public void setAdminId(Long adminId) {
-		this.adminId = adminId;
+	public void setActivo(String activo) {
+		this.activo = activo;
 	}
 
 
@@ -216,8 +281,5 @@ public class Restaurant implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
-	
-	
 	
 }

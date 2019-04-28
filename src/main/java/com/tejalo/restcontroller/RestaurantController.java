@@ -45,5 +45,14 @@ public class RestaurantController {
 		return restaurantRepositorio.save(restaurant);
 	}
 	
+	@GetMapping("/restaurantes/{email}/{password}")
+	public Restaurant obtenerUsuarioByFetch(@PathVariable(value = "email") String email,
+			@PathVariable(value = "password") String password) {
+		return restaurantRepositorio.findDataByLogin(email, password);
+	}
+	
+	
+	
+	
 	
 }
